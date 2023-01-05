@@ -1,0 +1,43 @@
+﻿/*Actors Page*/
+.actorTable {
+    margin: 0 auto;
+}
+
+.actorRow {
+}
+
+.actorTr {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.actionBtns {
+    grid-column: 4 / 6;
+}
+
+.internalBtn {
+    width: 25%;
+}
+
+/*Producers Page*/
+.producerTable {
+    margin: 0 auto;
+}
+
+
+/*Cinemas Page*/
+.cinemaTable {
+    margin: 0 auto;
+}
+
+/*Errors Page*/
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.errorText {
+    padding-bottom: 1em;
+}

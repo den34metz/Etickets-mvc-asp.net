@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Movie>
+
+@{
+    ViewData["Title"] = "List of Movies";
+    }
+
+<div class="moviesWrapper">
+    @foreach (var item in Model)
+    {
+    <div class="movieCard">
+        <div class="movieTitle">
+            <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+            <i class="bi bi-pencil-square"></i>
+        </div>
+        <div class="movieContent">
+            <img class="movieImg" src="@item.ImageURL" alt="@item.Name" />
+            <div class="movieDescription">
+
+                <p class="description">@Html.DisplayFor(modelItem => item.Description)</p>
+
+                <div class="movieInfo">
+                    <p>@Html.DisplayNameFor(model => model.Cinema) : </p>
+                    <p>@item.Cinema.Name</p>
+                </div>
+                <div class="movieInfo">
+                    <p>Category : </p>
+                    <p>@item.MovieCategory</p>
+                </div>
+                <div class="movieInfo">
+                    <p>@Html.DisplayNameFor(model => model.StartDate) : </p>
+                    <p>@item.StartDate.ToShortDateString()</p>
+                </div>
+                <div class="movieInfo">
+                    <p>@Html.DisplayNameFor(model => model.EndDate) : </p>
+                    <p>@item.EndDate.ToShortDateString()</p>
+                </div>
+                <div class="movieInfo btns">
+                    <p>Status : </p>
+                    @if(DateTime.Now >= item.StartDate && DateTime.Now <= item.EndDate)
+                    {
+
+                        <span class="badge bg-success text-white status">AVAILABLE</span>
+                    }else if(DateTime.Now > item.EndDate)
+                    {
+                        <span class="badge bg-danger text-white status">EXPIRED</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-primary text-white status">UPCOMING</span>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="btnsWrapper">
+            <a class="btn btn-outline-success addBtn"><i class="bi bi-cart-plus"></i>Add to Cart (Price @item.Price.ToString("C"))</a>
+            <a class="btn btn-outline-primary detailsBtn"><i class="bi bi-eye-fill"></i>Show Details</a>
+        </div>
+    </div>
+    }
+</div>
+
+
+

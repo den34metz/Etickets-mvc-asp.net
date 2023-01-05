@@ -1,13 +1,47 @@
-﻿.actorTable {
-   margin: 0 auto;
+﻿.addActorBtn {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 1;
+
+    .actorLink:hover {
+        cursor: pointer;
+        background-color: transparent;
+        color: green;
+    }
 }
 
-.actorRow {
-   
+//Add Actors Page
+
+.addActorWrapper {
+    width: 75%;
+    margin: 0 auto;
+
+    h1 {
+        font-size: 2rem;
+    }
 }
 
-.actorTr {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 1.5em;
+.addForm {
+    width: 70%;
+    margin: 0 auto;
+    padding: 1em;
 }
+.addActorBtns {
+    display: flex;
+    -webkit-align-items: inherit;
+    align-items: inherit;
+    justify-content: space-between;
+}
+
+//Details Page
+.detailImage {
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.75);
+}
+
+
+//Update Page
+

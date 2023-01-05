@@ -2,3 +2,12 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+$(document).ready(function () {
+    var output = document.getElementById('ProfilePicPreview');
+    output.src = $("#profilePic").val();
+})
+
+$("#profilePic").on("change", function () {
+    var output = document.getElementById('ProfilePicPreview');
+    output.src = $(this).val();
+});

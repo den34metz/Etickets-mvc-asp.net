@@ -1,7 +1,6 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
 
 //Variables
-
 :root{
     --primary-color: #0094ff;
 }
@@ -12,6 +11,8 @@ body {
     box-sizing: border-box;
 }
 
+
+
 main {
     padding-bottom: 7rem;
     padding-top: 3rem;
@@ -20,4 +21,30 @@ main {
 
 a {
     text-decoration: none;
+}
+
+i {
+    padding-right: .3em;
+}
+
+tr {
+    display: grid;
+    align-items: center;
+    border-top: solid lightgray thin;
+    padding: 1em;
+
+    .align-middle {
+        padding-right: 3em;
+    }
+}
+
+.navBar {
+    column-gap: 2em;
+}
+
+@media screen and (min-width: 1200px) {
+
+    .container {
+        max-width: 1480px;
+    }
 }
